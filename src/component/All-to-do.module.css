@@ -1,0 +1,134 @@
+.kg-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #f8f9fa; */
+  /* Light background color for the rows */
+  padding: 10px 20px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Light shadow effect */
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  /* Smooth transition for hover effect */
+}
+
+.kg-row:hover {
+  background-color: #e9ecef;
+  /* Slightly darker on hover */
+}
+
+.kg-row .col-4 {
+  font-size: 16px;
+  color: #495057;
+  /* Dark text for better contrast */
+  text-overflow: ellipsis;
+  /* Avoid overflow of text */
+  overflow: hidden;
+  white-space: nowrap;
+  /* Prevent wrapping */
+}
+
+.kg-row .col-4:first-child {
+  font-weight: bold;
+  /* Bold for task name */
+}
+
+.kg-row .col-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kg-row .col-2 .btn {
+  font-size: 14px;
+  padding: 8px 16px;
+  /* Good padding for the button */
+  border-radius: 5px;
+  min-width: 90px;
+  /* Minimum width for buttons */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
+  /* Prevent button text from breaking */
+}
+
+.kg-row .col-2 .btn-danger {
+  background-color: #dc3545;
+  /* Red background for delete button */
+  border: none;
+  color: white;
+  /* White text for button */
+}
+
+.kg-row .col-2 .btn-danger:hover {
+  background-color: #c82333;
+  /* Darker red on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.kg-row .col-2 .btn-danger:active {
+  background-color: #bd2130;
+  /* Darker red on click */
+  box-shadow: none;
+}
+
+@media screen and (max-width: 768px) {
+  .kg-row {
+    flex-wrap: wrap;
+    /* Stack the columns on smaller screens */
+    padding: 10px 15px;
+    /* Adjust padding */
+  }
+
+  .col-4,
+  .col-2 {
+    flex: 1 1 100%;
+    /* Full width on smaller screens */
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .kg-row .col-4 {
+    font-size: 14px;
+    /* Smaller font size for task and due date */
+    word-wrap: break-word;
+    /* Allow the text to break onto new lines */
+  }
+
+  .kg-row .col-2 {
+    display: block;
+    text-align: left;
+    margin-top: 5px;
+  }
+
+  .kg-row .col-2 .btn {
+    font-size: 12px;
+    /* Smaller button text */
+    padding: 6px 12px;
+    /* Smaller button padding */
+    min-width: auto;
+    /* Let the button resize naturally */
+    margin-top: 5px;
+    /* Add some space above the button */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .kg-row {
+    padding: 8px 12px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .kg-row .col-4 {
+    font-size: 14px;
+    /* Adjust text size for better readability */
+  }
+
+  .kg-row .col-2 .btn {
+    font-size: 11px;
+    /* Even smaller button text */
+    padding: 6px 12px;
+    /* Smaller button padding */
+  }
+}

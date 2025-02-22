@@ -1,0 +1,127 @@
+/* App.module.css */
+.todo-container {
+  margin: 0 auto;
+  max-width: 600px;
+  /* Restrict the width for a focused layout */
+  padding: 20px;
+  background-color: #f9f9f9;
+  /* Light background for contrast */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for depth */
+  text-align: center;
+  border: 5px solid black;
+  border-radius: 2px ;
+}
+
+.items-container {
+  margin-top: 20px;
+  background-color: #fff;
+  /* White container for todo items */
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for distinction */
+}
+
+.items-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.items-container li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  /* Space between todo text and button */
+  align-items: center;
+  flex-wrap: wrap;
+  /* Wrap for responsiveness */
+}
+
+.items-container li:last-child {
+  border-bottom: none;
+  /* Remove border for the last item */
+}
+
+button {
+  background-color: #28a745;
+  /* Bootstrap success green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+  /* Darker green on hover */
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 10px;
+  /* Add spacing between inputs */
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  /* Bootstrap primary blue */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .todo-container {
+    padding: 15px;
+    /* Reduce padding for smaller screens */
+    max-width: 90%;
+    /* Make container fill more space on smaller screens */
+  }
+
+  .items-container li {
+    flex-direction: column;
+    /* Stack content vertically */
+    align-items: flex-start;
+    /* Align text and button */
+  }
+
+  button {
+    width: 100%;
+    /* Full-width button for smaller screens */
+    text-align: center;
+    margin-top: 10px;
+    /* Add spacing between text and button */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .todo-container {
+    padding: 10px;
+    /* Further reduce padding for very small screens */
+  }
+
+  button {
+    font-size: 12px;
+    /* Slightly smaller button text */
+    padding: 8px;
+    /* Reduce button padding */
+  }
+
+  input {
+    font-size: 12px;
+    /* Adjust input text size */
+    padding: 6px 10px;
+    /* Adjust input padding */
+  }
+}
